@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/NikSWE/vj-cli/issues"
   },
-  "homepage": "https://github.com/NikSWE/vj-cli#readme"
+  "homepage": "https://github.com/NikSWE/vj-cli#readme",
+  "dependencies": {
+    "csv-parse": "^4.15.3"
+  }
 }
