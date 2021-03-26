@@ -1,0 +1,20 @@
+{
+  "name": "vj-cli",
+  "private": true,
+  "version": "0.0.0",
+  "description": "CLI for automating the process of creating vocab jams",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikSWE/vj-cli.git"
+  },
+  "author": "Nikhil Anand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NikSWE/vj-cli/issues"
+  },
+  "homepage": "https://github.com/NikSWE/vj-cli#readme"
+}
