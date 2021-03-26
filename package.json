@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/NikSWE/vj-cli#readme",
   "dependencies": {
-    "csv-parse": "^4.15.3"
+    "csv-parse": "^4.15.3",
+    "puppeteer": "^8.0.0"
   }
 }
