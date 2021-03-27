@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "description": "CLI for automating the process of creating vocab jams",
   "main": "src/main.js",
+  "bin": {
+    "vj": "bin/vj"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
