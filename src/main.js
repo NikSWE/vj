@@ -1,6 +1,13 @@
+const program = require("commander");
 const inquirer = require("inquirer");
 
 const utils = require("./utils");
+
+program.option("-d, --debug", "open browser to see the automation", false);
+
+program.parse(process.argv);
+
+const options = program.opts();
 
 inquirer.registerPrompt("date", require("inquirer-date-prompt"));
 
@@ -56,7 +63,7 @@ inquirer
     },
   ])
   .then((answers) => {
-    utils.createVocabJam(answers);
+    utils.createVocabJam(answers, options.debug);
   })
   .catch((error) => {
     if (error.isTtyError) {

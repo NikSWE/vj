@@ -94,8 +94,8 @@ async function createList(page, num) {
   }
 }
 
-async function createVocabJam(config) {
-  const browser = await puppeteer.launch({ headless: false });
+async function createVocabJam(config, debug) {
+  const browser = await puppeteer.launch({ headless: !debug });
   const context = await browser.createIncognitoBrowserContext();
   const page = await context.newPage();
 
