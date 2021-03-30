@@ -233,12 +233,31 @@ async function createVocabJam(config, debug) {
 
   const startsIn = moment(config.Timestamp).diff(moment());
 
-  setTimeout(async () => {
+  let remaining_count = 3;
+  setTimeout(async function run() {
     await page.waitForSelector(
       ".jam > .clearfloat > .setup > .actions > .ss-play"
     );
     await page.click(".jam > .clearfloat > .setup > .actions > .ss-play");
-    console.log("Jam has started");
+
+    const res = await page.$(
+      "body > div.dialogpane.alert > div > div.content > h3"
+    );
+
+    if (!_.isNull(res)) {
+      await page.click(".jam > .clearfloat > .setup > .actions > .ss-play");
+
+      if (remaining_count-- === 0) {
+        console.log("Not enough players joined on time, create a new jam");
+        process.exit(1);
+      } else {
+        console.log("Not enough players, will try again after 1 min");
+      }
+
+      setTimeout(run, 60000);
+    } else {
+      console.log("Jam has started");
+    }
   }, startsIn);
 
   page
