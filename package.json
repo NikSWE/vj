@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/NikSWE/vj-cli#readme",
   "dependencies": {
+    "commander": "^7.2.0",
     "csv-parse": "^4.15.3",
     "inquirer": "^8.0.0",
     "inquirer-date-prompt": "^2.0.0",
